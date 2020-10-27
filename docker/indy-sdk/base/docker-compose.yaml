@@ -1,0 +1,6 @@
+version: "3.6"
+
+services:
+  node:
+    image: ghabxph/indy-sdk:ubuntu-18.04
+    build: .
