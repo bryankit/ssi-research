@@ -1,6 +1,14 @@
+pull:
+	@echo --- pulling docker container ---
+	sudo docker-compose pull
+
 build:
 	@echo --- building container ---
 	sudo docker-compose build
+
+push:
+	@echo --- pushing container to dockerhub ---
+	sudo docker-compose push
 
 start:
 	@echo --- starting container ---

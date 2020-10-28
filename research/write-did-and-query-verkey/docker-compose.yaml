@@ -2,6 +2,7 @@ version: "3.6"
 
 services:
   node:
+    image: ghabxph/ssi-research:node-write-did
     build: .
     volumes:
     - /app/node_modules
