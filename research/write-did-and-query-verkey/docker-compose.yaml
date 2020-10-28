@@ -5,5 +5,17 @@ services:
     image: ghabxph/ssi-research:node-write-did
     build: .
     volumes:
-    - /app/node_modules
-    - .:/app
+      - /app/node_modules
+      - .:/app
+    # tutorial bug: TEST_POOL_IP env variable will never work, because the blockchain in util.js
+    # is static. There should be a way to generate a blockchain so that signature for each block
+    # will be valid.
+ #  environment:
+ #    - TEST_POOL_IP=indy-pool
+  indy-pool:
+    image: ghabxph/ssi-research:indy-pool
+    build:
+      context: .
+      dockerfile: indy-pool.dockerfile
+    ports:
+      - 9701-9708:9701-9708

@@ -31,5 +31,7 @@ ssh:
 	sudo docker exec -it write-did-and-query-verkey_node_1 bash
 
 run:
+	@echo --- remove indy client settings ---
+	rm -fvr ~/.indy_client
 	@echo --- run the application ---
 	npm run start
