@@ -1,0 +1,8 @@
+version: "3.6"
+
+services:
+  indy-pool:
+    image: ghabxph/ssi-research:indy-pool
+    build:
+      context: .
+      dockerfile: indy-pool.dockerfile
